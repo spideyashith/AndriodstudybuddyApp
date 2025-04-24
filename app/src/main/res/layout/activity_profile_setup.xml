@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:paddingTop="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSetupActivity">
+
+
+
+ <LinearLayout
+     android:gravity="center"
+     android:orientation="vertical"
+     android:padding="24dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+     
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/etname"
+         android:hint="Full Name" />
+
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/etcourse"
+         android:hint="Course"/>
+
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/etsemester"
+         android:hint="Semester"/>
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="Areas of Intrest"
+         android:id="@+id/etintrest"/>
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/etgoals"
+         android:hint="Study Goals"/>
+
+
+     <EditText
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="Short Bio"
+         android:id="@+id/etbio"/>
+
+     <Button
+         android:id="@+id/btnsaveprofile"
+         android:layout_marginTop="16dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Save And Continue" />
+
+
+ </LinearLayout>
+
+
+
+</ScrollView>

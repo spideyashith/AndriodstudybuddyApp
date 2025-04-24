@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StudyApp</string>
+    <string name="logout">Logout</string>
+    <string name="resource_sharing">Resource Sharing</string>
+    <string name="discussion_forums">Discussion Forums</string>
+    <string name="find_study_partner">Find Study Partner</string>
+    <string name="home">Home</string>
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+
+</resources>
