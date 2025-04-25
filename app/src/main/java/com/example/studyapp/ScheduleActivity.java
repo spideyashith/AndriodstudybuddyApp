@@ -30,10 +30,9 @@ public class ScheduleActivity extends AppCompatActivity {
     ArrayAdapter<String> adapter;
 
 
-    String getSelectedDate = "", getSelectedTime = "";
-
-
     String selectedDate = "", selectedTime = "";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +88,7 @@ public class ScheduleActivity extends AppCompatActivity {
         final Calendar  calendar = Calendar.getInstance();
         TimePickerDialog timePickerDialog = new TimePickerDialog(this,
                 (view, hour, minute) -> {
-                    selectedTime = String.format("%02d":"%02", hour, minute);
+                    selectedTime = String.format("%02d : %02", hour, minute);
                     updateDateTimeDisplay();
                 },
                 calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
