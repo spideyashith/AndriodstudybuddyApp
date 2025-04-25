@@ -82,5 +82,10 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(HomeActivity.this, ResourceSharingActivity.class);
             startActivity(intent);
         });
+
+        findViewById(R.id.btnschedulehome).setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ScheduleActivity.class);
+            startActivity(intent);
+        });
     }
 }

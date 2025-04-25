@@ -51,6 +51,12 @@
             android:layout_height="wrap_content"
             android:text="Resourse Sharing" />
 
+        <Button
+            android:id="@+id/btnschedulehome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule Session" />
+
 
     </LinearLayout>
 
