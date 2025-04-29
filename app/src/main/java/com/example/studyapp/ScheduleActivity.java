@@ -41,12 +41,12 @@ public class ScheduleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_schedule);
 
 
-        topicinput = findViewById(R.id.topicinput);
-        pickdatebtn = findViewById(R.id.btnpickdate);
-        pickTimebtn = findViewById(R.id.btnpickTime);
-        schedulebtn = findViewById(R.id.btnschedule);
-        selectDatetime = findViewById(R.id.selectedatetime);
-        sessionlist = findViewById(R.id.sessionlist);
+        topicinput = findViewById(R.id.topicInput);
+        pickdatebtn = findViewById(R.id.btnPickDate);
+        pickTimebtn = findViewById(R.id.btnPickTime);
+        schedulebtn = findViewById(R.id.btnSchedule);
+        selectDatetime = findViewById(R.id.selectedDateTime);
+        sessionlist = findViewById(R.id.sessionList);
 
 
         sessionitems = new ArrayList<>();
@@ -88,7 +88,7 @@ public class ScheduleActivity extends AppCompatActivity {
         final Calendar  calendar = Calendar.getInstance();
         TimePickerDialog timePickerDialog = new TimePickerDialog(this,
                 (view, hour, minute) -> {
-                    selectedTime = String.format("%02d : %02", hour, minute);
+                    selectedTime = String.format("%02d : %02d", hour, minute);
                     updateDateTimeDisplay();
                 },
                 calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), true);
