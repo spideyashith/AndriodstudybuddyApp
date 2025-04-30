@@ -9,6 +9,38 @@
     android:orientation="vertical"
     tools:context=".DiscussionForumActivity">
 
+
+    <TextView
+        android:id="@+id/forumTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discussion Forum"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/newPostInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ask a question or share something..."
+        android:background="@drawable/edittext_bg"
+        android:padding="12dp"
+        android:textColor="#0000"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#008577"
+        android:textColor="#FFFFFF" />
+
     <ListView
         android:id="@+id/forumlistview"
         android:layout_width="match_parent"
