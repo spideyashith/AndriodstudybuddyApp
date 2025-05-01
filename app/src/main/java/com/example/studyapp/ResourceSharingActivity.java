@@ -5,22 +5,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
 public class ResourceSharingActivity extends AppCompatActivity {
-    EditText resourseInput;
-    Button btnupload;
-    ListView resourselistview;
 
-    ArrayList<String> resourseList;
-    ArrayAdapter<String> adapter;
+    private EditText resourseInput;
+    private Button btnUpload;
+    private ListView resourseListView;
+
+    private ArrayList<String> resourseList;
+    private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +27,28 @@ public class ResourceSharingActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_resource_sharing);
 
+        // Initialize Views
         resourseInput = findViewById(R.id.edittextresourse);
-        btnupload = findViewById(R.id.buttonUpload);
-        resourselistview = findViewById(R.id.listviewresourse);
+        btnUpload = findViewById(R.id.buttonUpload);
+        resourseListView = findViewById(R.id.listviewresourse);
 
-
+        // Initialize List and Adapter
         resourseList = new ArrayList<>();
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, resourseList);
-        resourselistview.setAdapter(adapter);
+        resourseListView.setAdapter(adapter);
 
+        // Handle Upload Button Click
+        btnUpload.setOnClickListener(v -> {
+            String resourseName = resourseInput.getText().toString().trim();
 
-        btnupload.setOnClickListener(v -> {
-            String resoursename = resourseInput.getText().toString().trim();
-            if (!resoursename.isEmpty()){
-                resourseList.add(resoursename);
+            if (!resourseName.isEmpty()) {
+                resourseList.add(resourseName);
                 adapter.notifyDataSetChanged();
                 resourseInput.setText("");
+                Toast.makeText(this, "Resource uploaded!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Please enter a resource name", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
