@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     NavigationView navigationView;
     Toolbar toolbar;
     Button btnLogout;
+    Button btnchart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigation_view);
         toolbar = findViewById(R.id.toolbar);
         btnLogout = findViewById(R.id.btnLogout);
+        btnchart = findViewById(R.id.chatbtn);
 
         Button feedback = findViewById(R.id.rating);
         feedback.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +99,13 @@ public class HomeActivity extends AppCompatActivity {
             Intent intent = new Intent(HomeActivity.this, ScheduleActivity.class);
             startActivity(intent);
         });
+
+
+        btnchart.setOnClickListener(v->{
+            Intent intent = new Intent(HomeActivity.this,InAppChatActivity.class);
+            startActivity(intent);
+        });
+
 
 
 

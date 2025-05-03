@@ -65,6 +65,14 @@
             android:layout_height="wrap_content"
             android:text="Rating ⭐" />
 
+        <Button
+            android:id="@+id/chatbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat With  Buddy"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
 
     </LinearLayout>
 
