@@ -3,53 +3,58 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#FAFAFA"
     tools:context=".InAppChatActivity">
-
 
     <TextView
         android:id="@+id/charttitle"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:textColor="#000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chart With You Study Buddy" />
+        android:layout_marginBottom="10dp"
+        android:paddingTop="15dp"
+        android:layout_gravity="center"
+        android:text="Chat With Your Study Buddy"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/chatlistview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:dividerHeight="8dp"/>
-
-
+        android:dividerHeight="8dp" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    
-    <EditText
-        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/chatmessageInput"
-        android:layout_weight="1"
-        android:hint="Type your message......."
-        android:padding="10dp"/>
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
 
-    <ImageButton
-        android:id="@+id/sendmessagebtn"
-        android:layout_width="wrap_content"
-        android:contentDescription="SEND MESSAGE"
-        android:padding="8dp"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_menu_send" />
+        <EditText
+            android:id="@+id/chatmessageInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="25dp"
+            android:hint="Type your message..."
+            android:background="@android:drawable/edit_text"
+            android:padding="10dp"
+            android:textColor="#000" />
 
+        <ImageButton
+            android:id="@+id/sendmessagebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="25dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Send Message"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+    </LinearLayout>
 
 </LinearLayout>

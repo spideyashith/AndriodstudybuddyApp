@@ -9,21 +9,17 @@ import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
 public class ForumChatActivity extends AppCompatActivity {
 
-    private ListView messagelistview;
-    private  EditText messageinput;
+    ListView messagelistview;
+    EditText messageinput;
+    Button sendButton;
 
-    private Button sendButton;
-
-    private ArrayList<String> messagelist;
-    private ArrayAdapter<String> messageAdapter;
+    ArrayList<String> messagelist;
+    ArrayAdapter<String> messageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,30 +27,21 @@ public class ForumChatActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_forum_chat);
 
-
-        messagelistview.findViewById(R.id.messagelistview);
-        messageinput.findViewById(R.id.messageinput);
-        sendButton.findViewById(R.id.sendbutton);
+        messagelistview = findViewById(R.id.messagelistview);
+        messageinput = findViewById(R.id.messageinput);
+        sendButton = findViewById(R.id.sendbutton);
 
         messagelist = new ArrayList<>();
-        messageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,messagelist);
+        messageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, messagelist);
         messagelistview.setAdapter(messageAdapter);
 
-
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String message = messageinput.getText().toString().trim();
-                if (!message.isEmpty()){
-                    messagelist.add("You: " +message);
-                    messageAdapter.notifyDataSetChanged();
-                    messageinput.setText("");
-
-                }
+        sendButton.setOnClickListener(v -> {
+            String message = messageinput.getText().toString().trim();
+            if (!message.isEmpty()) {
+                messagelist.add("You: " + message);
+                messageAdapter.notifyDataSetChanged();
+                messageinput.setText("");
             }
         });
-
-
-
     }
 }
