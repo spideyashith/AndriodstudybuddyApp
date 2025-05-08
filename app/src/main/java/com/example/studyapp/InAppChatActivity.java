@@ -2,6 +2,7 @@ package com.example.studyapp;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 
 public class InAppChatActivity extends AppCompatActivity {
     EditText messageinput;
+    String message;
     ImageButton sendmessagebtn;
     ListView chatlistview;
 
@@ -54,6 +56,17 @@ public class InAppChatActivity extends AppCompatActivity {
                 }, 1500);
             }
         });
+
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                String reply = getMockReply(message);
+                messagelist.add("Buddy: " + reply);
+                adapter.notifyDataSetChanged();
+                chatlistview.smoothScrollToPosition(messagelist.size() - 1);
+            }
+        }, 1500);
     }
 
     // Simple mock replies based on keywords
@@ -69,4 +82,6 @@ public class InAppChatActivity extends AppCompatActivity {
             return "Sounds good! Let's stay focused. 📚";
         }
     }
+
+
 }

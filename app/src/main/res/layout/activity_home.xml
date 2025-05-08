@@ -20,7 +20,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:title="Study Buddy" />
 
-        <!-- Your screen content -->
+        <!-- Main content -->
         <TextView
             android:id="@+id/home_content"
             android:layout_width="match_parent"
@@ -29,6 +29,7 @@
             android:textSize="18sp"
             android:padding="16dp" />
 
+        <!-- Buttons -->
         <Button
             android:id="@+id/btnLogout"
             android:layout_gravity="center"
@@ -42,14 +43,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Find Study Patner" />
+            android:text="Find Study Partner" />
 
         <Button
             android:id="@+id/btnresoursesharing"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Resourse Sharing" />
+            android:text="Resource Sharing" />
 
         <Button
             android:id="@+id/btnschedulehome"
@@ -69,10 +70,9 @@
             android:id="@+id/chatbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chat With  Buddy"
+            android:text="Chat With Buddy"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"/>
-
+            android:layout_marginTop="20dp" />
 
     </LinearLayout>
 
