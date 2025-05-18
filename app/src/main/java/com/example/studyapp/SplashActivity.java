@@ -40,5 +40,19 @@ public class SplashActivity extends AppCompatActivity {
             }
             finish();
         }, 2000); // 2 seconds
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (user != null) {
+            // User is logged in, go to home
+            startActivity(new Intent(SplashActivity.this, HomeActivity.class));
+        } else {
+            // User not logged in, go to login
+            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+        }
+        finish();
+
     }
+
+
 }
