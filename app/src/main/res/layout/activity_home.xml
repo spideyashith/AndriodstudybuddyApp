@@ -132,6 +132,15 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp" />
 
+
+        <Button
+            android:id="@+id/btnGoals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track Goals"
+            android:layout_gravity="center" />
+
+
     </LinearLayout>
 
     <!-- Navigation Drawer -->

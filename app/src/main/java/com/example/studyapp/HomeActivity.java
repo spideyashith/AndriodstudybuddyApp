@@ -148,5 +148,9 @@ public class HomeActivity extends AppCompatActivity {
                 Toast.makeText(HomeActivity.this, "Failed to load profile", Toast.LENGTH_SHORT).show();
             }
         });
+
+        findViewById(R.id.btnGoals).setOnClickListener(v ->
+                startActivity(new Intent(HomeActivity.this, StudyGoalsActivity.class)));
+
     }
 }
