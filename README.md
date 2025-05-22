@@ -134,8 +134,8 @@ Study Buddy is a collaborative Android application designed for college students
 
 ## 🙋‍♂️ Author
 
-* 💼 [Your Name](https://github.com/your-username)
-* 📧 [your.email@example.com](mailto:your.email@example.com)
+* 💼 Ashith Fernandes
+* 📧 ashithfernandes319@gmail.com
 
 ---
 
