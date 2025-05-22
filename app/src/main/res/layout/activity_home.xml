@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Main content area -->
+    <!-- Main Content Area -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,128 +19,158 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="Study Buddy" />
+            app:title="Study Buddy"
+            app:titleTextColor="@android:color/white" />
 
-        <!-- Welcome -->
-        <TextView
-            android:id="@+id/home_content"
+        <!-- Scrollable Content -->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Welcome to Study Buddy!"
-            android:textSize="18sp"
-            android:padding="16dp" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
 
-        <!-- Progress Bar centered -->
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            android:indeterminate="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <!-- Profile Information -->
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name: "
-            android:textStyle="bold"
-            android:paddingStart="16dp"
-            android:paddingTop="8dp" />
+                <!-- Welcome Message -->
+                <TextView
+                    android:id="@+id/home_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Study Buddy!"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingBottom="16dp" />
 
-        <TextView
-            android:id="@+id/tvCourse"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Course: "
-            android:paddingStart="16dp" />
+                <!-- Profile Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="12dp">
 
-        <TextView
-            android:id="@+id/tvSemester"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Semester: "
-            android:paddingStart="16dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tvBio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bio: "
-            android:paddingStart="16dp" />
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            android:indeterminate="true"
+                            android:layout_marginBottom="8dp" />
 
-        <TextView
-            android:id="@+id/tvGoals"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Goals: "
-            android:paddingStart="16dp" />
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:text="Name: "
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextStyleProfile" />
 
-        <TextView
-            android:id="@+id/tvInterest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Interest: "
-            android:paddingStart="16dp"
-            android:paddingBottom="8dp" />
+                        <TextView
+                            android:id="@+id/tvCourse"
+                            android:text="Course: "
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextStyleProfile" />
 
-        <!-- Buttons -->
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            android:layout_margin="16dp" />
+                        <TextView
+                            android:id="@+id/tvSemester"
+                            android:text="Semester: "
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            style="@style/TextStyleProfile" />
 
-        <Button
-            android:id="@+id/btnfindpatner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Find Study Partner" />
+                        <TextView
+                            android:id="@+id/tvBio"
+                            android:text="Bio: "
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextStyleProfile" />
 
-        <Button
-            android:id="@+id/btnresoursesharing"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Resource Sharing" />
+                        <TextView
+                            android:id="@+id/tvGoals"
+                            android:text="Goals: "
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextStyleProfile" />
 
-        <Button
-            android:id="@+id/btnschedulehome"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:text="Schedule Session" />
+                        <TextView
+                            android:id="@+id/tvInterest"
+                            android:text="Interest: "
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextStyleProfile" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/rating"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rating ⭐" />
+                <!-- Button Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-        <Button
-            android:id="@+id/chatbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chat With Buddy"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnfindpatner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Find Study Partner"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnschedulehome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Schedule Session"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
-        <Button
-            android:id="@+id/btnGoals"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Track Goals"
-            android:layout_gravity="center" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Rating ⭐"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/chatbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Chat With Buddy"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGoals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Track Goals"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Logout"
+                        android:textColor="@android:color/holo_red_dark"
+                        style="@style/Widget.MaterialComponents.Button.TextButton" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <!-- Navigation Drawer -->

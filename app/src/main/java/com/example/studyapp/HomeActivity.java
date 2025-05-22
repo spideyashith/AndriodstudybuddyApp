@@ -101,8 +101,8 @@ public class HomeActivity extends AppCompatActivity {
         findViewById(R.id.btnfindpatner).setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, FindStudyPartnerActivity.class)));
 
-        findViewById(R.id.btnresoursesharing).setOnClickListener(v ->
-                startActivity(new Intent(HomeActivity.this, ResourceSharingActivity.class)));
+//        findViewById(R.id.btnresoursesharing).setOnClickListener(v ->
+//                startActivity(new Intent(HomeActivity.this, ResourceSharingActivity.class)));
 
         findViewById(R.id.btnschedulehome).setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, ScheduleActivity.class)));

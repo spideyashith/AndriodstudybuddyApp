@@ -17,7 +17,7 @@
         android:layout_height="120dp"
         android:layout_gravity="center"
         android:contentDescription="App Logo"
-        app:srcCompat="@android:drawable/btn_dialog" />
+        app:srcCompat="@drawable/login" />
 
     <TextView
         android:id="@+id/textView2"

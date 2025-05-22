@@ -1,3 +1,7 @@
+package com.example.studyapp;
+
+import java.util.List;
+
 public class UserProfile {
     public String uid;
     public String name;
