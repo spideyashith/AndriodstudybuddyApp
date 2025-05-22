@@ -1,4 +1,3 @@
-Great! Here's a polished `README.md` template tailored for your **Study Buddy** Android app project. You can copy and paste this into your GitHub repository’s README file:
 
 ---
 
