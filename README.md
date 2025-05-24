@@ -1,40 +1,14 @@
+######### 🎓✨ **Study Buddy – Your Ultimate College Study Companion**
+**A collaborative, student-focused Android app to help you study smarter, not harder!**
 
----
 
-````markdown
-# 📚 Study Buddy – College Study Companion App
 
-Study Buddy is a collaborative Android application designed for college students to find study partners, share resources, track goals, join discussions, and schedule study sessions effectively. Built using **Java**, **Firebase**, and **Android Studio**, it offers a suite of features to help learners stay productive and connected.
 
----
 
-## 🚀 Features
 
-- 🔐 **Authentication**
-  - Register/Login using Email (Google & Facebook coming soon!)
-  
-- 👥 **Study Partner Matching**
-  - Find and connect with study partners by course.
 
-- 🗂️ **Resource Sharing**
-  - Upload and download PDF resources securely via Firebase Storage.
 
-- 🎯 **Study Goals & Progress Tracker**
-  - Set, track, and manage academic goals with visual progress indicators.
 
-- 💬 **In-App Chat**
-  - Real-time messaging with study buddies using Firebase Realtime Database.
-
-- 🧑‍💻 **Discussion Forums**
-  - Participate in course-specific discussions (e.g., BCA, BBA, MCA).
-
-- 📅 **Schedule Study Sessions**
-  - Pick date/time, enter topics, and view scheduled sessions.
-
-- 🔔 **Push Notifications** *(Upcoming)*
-  - Get notified of new messages, upcoming sessions, and deadlines.
-
----
 
 ## 🛠️ Tech Stack
 
