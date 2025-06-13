@@ -1,5 +1,6 @@
 <!-- Header Title with Typing SVG -->
-<h1 align="center">
+
+<h1 align="center">ANDRIOD STUDY BUDDY APP 🎓
 </h1>
 
 <p align="center">
@@ -26,3 +27,44 @@
 # 1. Clone the Repository
 git clone https://github.com/your-username/study-buddy-app.git
 cd study-buddy-app
+
+
+<h3> 📂 Project Structure</h3>
+study-buddy-app/
+├── Activities/
+│   ├── HomeActivity.java
+│   ├── InAppChatActivity.java
+│   ├── ScheduleActivity.java
+│   ├── ForumChatActivity.java
+│   └── ...
+├── Adapters/
+├── Models/
+├── res/
+│   ├── layout/
+│   ├── drawable/
+│   └── values/
+└── utils/
+
+
+
+👨‍💻 Author
+<p align="center"> <b>Ashith Fernandes</b> <br> <a href="mailto:ashithfernandes319@gmail.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/> </a> <a href="https://github.com/ashithfernandes"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/> </a> </p>
+
+
+🌟 Show Your Support
+<p align="center"> ⭐ Star this repo <br>🍴 Fork it <br>🐛 Report bugs or contribute enhancements </p>
+
+
+📜 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+
+<h3> 💬 This project is open-source. Feel free to contribute and push your improvements!</h3>
+
+
+
+
+
+
+
+
