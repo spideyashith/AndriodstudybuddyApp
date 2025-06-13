@@ -28,8 +28,7 @@
 git clone https://github.com/your-username/study-buddy-app.git
 cd study-buddy-app
 
-
-<h3> 📂 Project Structure</h3>
+📂 Project Structure
 study-buddy-app/
 ├── Activities/
 │   ├── HomeActivity.java
@@ -47,8 +46,19 @@ study-buddy-app/
 
 
 
-👨‍💻 Author
-<p align="center"> <b>Ashith Fernandes</b> <br> <a href="mailto:ashithfernandes319@gmail.com"> <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/> </a> <a href="https://github.com/ashithfernandes"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/> </a> </p>
+## 👨‍💻 Author
+
+<p align="center">
+  <b>Ashith Fernandes</b>  
+  <br>
+  <a href="mailto:ashithfernandes319@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  <a href="https://github.com/ashithfernandes">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
+  </a>
+</p>
+
 
 
 🌟 Show Your Support
