@@ -68,6 +68,11 @@ This project is licensed under the MIT License – see the LICENSE file for deta
 <h3> 💬 This project is open-source. Feel free to contribute and push your improvements!</h3>
 
 
+<p align="center">
+  © 2025 <strong>Ashith Fernandes</strong> • Study Buddy App • Released under the <a href="LICENSE">MIT License</a>
+</p>
+
+
 
 
 
