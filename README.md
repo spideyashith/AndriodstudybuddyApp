@@ -7,6 +7,22 @@
   <b>A collaborative, student-focused Android app to help you study smarter, not harder!</b>
 </p>
 
+
+## ✨ Overview
+
+**Study Buddy** is a collaborative Android app built for college students to:
+
+- Find and connect with study partners  
+- Schedule sessions  
+- Track study goals & progress  
+- Share study resources (PDFs, notes)  
+- Chat in-app with peers  
+- Join course-specific discussion forums  
+
+This app empowers smart learning and simplifies campus collaboration.
+
+
+
 ---
 
 ## 🛠️ Tech Stack
