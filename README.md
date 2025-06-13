@@ -88,11 +88,11 @@ study-buddy-app/
 This project is licensed under the MIT License – see the LICENSE file for details.
 
 
-<h3> 💬 This project is open-source. Feel free to contribute and push your improvements!</h3>
+<p> 💬 This project is open-source. Feel free to contribute and push your improvements!</p>
 
 
 <p align="center">
-  © 2025 <strong>Ashith Fernandes</strong> • Study Buddy App • Released under the <a href="LICENSE">MIT License</a>
+ <b> © 2025</b> <strong>Ashith Fernandes</strong> • Study Buddy App • Released under the <a href="LICENSE">MIT License</a>
 </p>
 
 
