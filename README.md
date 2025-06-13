@@ -1,6 +1,5 @@
 <!-- Header Title with Typing SVG -->
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00FF95&center=true&vCenter=true&multiline=true&width=800&lines=🎓+Study+Buddy;Your+Ultimate+College+Study+Companion!">
 </h1>
 
 <p align="center">
