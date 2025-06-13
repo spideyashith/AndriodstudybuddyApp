@@ -27,7 +27,7 @@ git clone https://github.com/your-username/study-buddy-app.git
 cd study-buddy-app
 
 <h3>📂 Project Structure
-study-buddy-app/
+📁 Project Structure – study-buddy-app/
 ├── Activities/
 │   ├── HomeActivity.java
 │   ├── InAppChatActivity.java
@@ -43,8 +43,7 @@ study-buddy-app/
 └── utils/
 </h3>
 
-
-👨‍💻 Author
+<h3>👨‍💻 Author</h3>
 <p align="center">
   <b>Ashith Fernandes</b>  
   <br>
