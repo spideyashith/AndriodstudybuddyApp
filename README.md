@@ -24,7 +24,7 @@
 ## 🔧 Installation & Setup
 # 1. Clone the Repository
 git clone https://github.com/your-username/study-buddy-app.git
-cd study-buddy-app
+
 
 ## 📂 Project Structure
 
