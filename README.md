@@ -26,7 +26,8 @@
 git clone https://github.com/your-username/study-buddy-app.git
 cd study-buddy-app
 
-<h3>📂 Project Structure</h3>
+## 📂 Project Structure
+
 ```bash
 study-buddy-app/
 ├── Activities/
@@ -42,7 +43,7 @@ study-buddy-app/
 │   ├── drawable/
 │   └── values/
 └── utils/
-```
+``` 
 
 <h3>👨‍💻 Author</h3>
 <p align="center">
