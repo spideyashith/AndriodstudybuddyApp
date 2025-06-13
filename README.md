@@ -22,8 +22,6 @@
 ---
 
 ## 🔧 Installation & Setup
-
-```bash
 # 1. Clone the Repository
 git clone https://github.com/your-username/study-buddy-app.git
 cd study-buddy-app
@@ -47,7 +45,6 @@ study-buddy-app/
 
 
 ## 👨‍💻 Author
-
 <p align="center">
   <b>Ashith Fernandes</b>  
   <br>
@@ -58,7 +55,6 @@ study-buddy-app/
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"/>
   </a>
 </p>
-
 
 
 🌟 Show Your Support
