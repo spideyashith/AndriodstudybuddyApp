@@ -1,11 +1,17 @@
 <!-- Header Title with Typing SVG -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/spideyashith/angularapp/refs/heads/master/aimit-logo.webp" alt="AIMIT Logo" width="400"/>
+</p>
 
-<h1 align="center">ANDRIOD STUDY BUDDY APP 🎓
+
+<h1 align="center">🎓 Study Buddy – A College Project by Ashith Fernandes
+🌟 M.Sc. Software Technology Student at St Aloysius (Deemed to be University), AIMIT Mangalore
+
+Welcome to Study Buddy, my very first college project!
+This Android application was built as part of my academic journey at St Aloysius AIMIT, where I’m currently pursuing M.Sc. in Software Technology.
+The app is designed to help students collaborate, connect, and study smarter through features like scheduling sessions, sharing resources, chatting in-app, and setting academic goals.
 </h1>
 
-<p align="center">
-  <b>A collaborative, student-focused Android app to help you study smarter, not harder!</b>
-</p>
 
 ---------------------------------------------------------------------------------------------
 
