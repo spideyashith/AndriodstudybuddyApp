@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/spideyashith/angularapp/refs/heads/master/aimit-logo.webp" alt="AIMIT Logo" width="400"/>
 </p>
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h2 align="center">🎓 Study Buddy – A College Project by Ashith Fernandes
 M.Sc. Software Technology Student at St Aloysius (Deemed to be University), AIMIT Mangalore</h2>
