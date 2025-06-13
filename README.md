@@ -26,7 +26,7 @@
 git clone https://github.com/your-username/study-buddy-app.git
 cd study-buddy-app
 
-##📂 Project Structure
+<h3>📂 Project Structure
 study-buddy-app/
 ├── Activities/
 │   ├── HomeActivity.java
@@ -41,10 +41,10 @@ study-buddy-app/
 │   ├── drawable/
 │   └── values/
 └── utils/
+</h3>
 
 
-
-## 👨‍💻 Author
+👨‍💻 Author
 <p align="center">
   <b>Ashith Fernandes</b>  
   <br>
@@ -56,12 +56,11 @@ study-buddy-app/
   </a>
 </p>
 
-
-##🌟 Show Your Support
+<h3>🌟 Show Your Support</h3>
 <p align="center"> ⭐ Star this repo <br>🍴 Fork it <br>🐛 Report bugs or contribute enhancements </p>
 
 
-##📜 License
+<h3>📜 License</h3>
 This project is licensed under the MIT License – see the LICENSE file for details.
 
 
