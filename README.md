@@ -1,135 +1,29 @@
-######### 🎓✨ **Study Buddy – Your Ultimate College Study Companion**
-**A collaborative, student-focused Android app to help you study smarter, not harder!**
+<!-- Header Title with Typing SVG -->
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00FF95&center=true&vCenter=true&multiline=true&width=800&lines=🎓+Study+Buddy;Your+Ultimate+College+Study+Companion!">
+</h1>
 
+<p align="center">
+  <b>A collaborative, student-focused Android app to help you study smarter, not harder!</b>
+</p>
 
-
-
-
-
-
-
-
+---
 
 ## 🛠️ Tech Stack
 
-- **Java** – Core programming language
-- **XML** – UI Layouts
-- **Firebase**
-  - Authentication
-  - Realtime Database
-  - Firebase Storage
-- **Gradle** – Dependency Management
-- **Android Studio Meerkat (Giraffe compatible)**
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
+  <img src="https://img.shields.io/badge/XML-%23FF6600.svg?style=for-the-badge&logo=xml&logoColor=white" />
+  <img src="https://img.shields.io/badge/Firebase-%23FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black" />
+  <img src="https://img.shields.io/badge/Gradle-%2302303A.svg?style=for-the-badge&logo=gradle&logoColor=white" />
+  <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white" />
+</p>
 
 ---
 
 ## 🔧 Installation & Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/study-buddy-app.git
-   cd study-buddy-app
-````
-
-2. **Open in Android Studio**
-
-3. **Connect Firebase**
-
-   * Add your own `google-services.json` to the `app/` directory.
-   * Enable:
-
-     * Authentication (Email/Password)
-     * Realtime Database
-     * Firebase Storage
-
-4. **Set Firebase Rules** (in Firebase console)
-
-   ```json
-   {
-     "rules": {
-       "Users": {
-         ".read": "auth != null",
-         "$uid": {
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       },
-       "StudyGoals": {
-         "$uid": {
-           ".read": "auth != null && auth.uid == $uid",
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       },
-       "inappchat": {
-         ".read": "true",
-         ".write": "true"
-       },
-       "study_partners": {
-         ".read": "auth != null",
-         "$uid": {
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       },
-       "resources": {
-         ".read": "auth != null",
-         ".write": "auth != null"
-       },
-       "sessions": {
-         "$uid": {
-           ".read": "auth != null && auth.uid == $uid",
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       }
-     }
-   }
-   ```
-
----
-
-
-## 📂 Project Structure
-
-```
-├── Activities/
-│   ├── HomeActivity.java
-│   ├── InAppChatActivity.java
-│   ├── ScheduleActivity.java
-│   ├── ForumChatActivity.java
-│   └── ...
-├── Adapters/
-├── Models/
-├── res/
-│   ├── layout/
-│   ├── drawable/
-│   └── values/
-└── utils/
-```
-
----
-
-## 🙋‍♂️ Author
-
-* 💼 Ashith Fernandes
-* 📧 ashithfernandes319@gmail.com
-
----
-
-## 🌟 Show Your Support
-
-If you like this project:
-
-* ⭐ Star it on GitHub
-* 🍴 Fork it
-* 🐛 Report issues or contribute enhancements!
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
-```
-
----
-
-And This Project is open source u can Contribute towards this project and push back to this github account.
-```
+```bash
+# 1. Clone the Repository
+git clone https://github.com/your-username/study-buddy-app.git
+cd study-buddy-app
