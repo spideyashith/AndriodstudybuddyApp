@@ -5,7 +5,7 @@
 
 
 <h2 align="center">🎓 Study Buddy – A College Project by Ashith Fernandes
-🌟 M.Sc. Software Technology Student at St Aloysius (Deemed to be University), AIMIT Mangalore</h2>
+M.Sc. Software Technology Student at St Aloysius (Deemed to be University), AIMIT Mangalore</h2>
 
 <p><b>Welcome to Study Buddy, my very first college project!
 This Android application was built as part of my academic journey at St Aloysius AIMIT, where I’m currently pursuing M.Sc. in Software Technology.
