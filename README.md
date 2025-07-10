@@ -142,6 +142,19 @@ cd study-buddy-app
 📧 [ashithfernandes319@gmail.com](mailto:ashithfernandes319@gmail.com)
 
 ---
+## 📲 Download APK
+
+[![Download APK](https://img.shields.io/badge/Download%20APK-Study%20Buddy-blue?style=for-the-badge&logo=android)](https://github.com/spideyashith/AndriodstudybuddyApp/releases/download/v1.0.0/app-debug.apk)
+
+---
+
+### 📱 How to Install
+
+1. Download the APK file from the button above.
+2. Transfer it to your Android phone (if downloaded on a computer).
+3. Open the APK file and allow installation from unknown sources.
+4. Enjoy using **Study Buddy**! 🎓
+---
 
 ## 🌟 Show Your Support
 
