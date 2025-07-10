@@ -1,141 +1,145 @@
-
----
-
-````markdown
 # 📚 Study Buddy – College Study Companion App
 
-Study Buddy is a collaborative Android application designed for college students to find study partners, share resources, track goals, join discussions, and schedule study sessions effectively. Built using **Java**, **Firebase**, and **Android Studio**, it offers a suite of features to help learners stay productive and connected.
+**Study Buddy** is a collaborative Android application designed for college students to find study partners, share resources, track goals, join discussions, and schedule sessions effectively.  
+Built with **Java**, **Firebase**, and **Android Studio**, it helps learners stay productive and connected.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 **Authentication**
-  - Register/Login using Email (Google & Facebook coming soon!)
-  
-- 👥 **Study Partner Matching**
-  - Find and connect with study partners by course.
+- 🔐 **Authentication**  
+  Register/Login using Email (Google & Facebook coming soon!)
 
-- 🗂️ **Resource Sharing**
-  - Upload and download PDF resources securely via Firebase Storage.
+- 👥 **Study Partner Matching**  
+  Connect with students by course/stream (BCA, BBA, MCA, etc.)
 
-- 🎯 **Study Goals & Progress Tracker**
-  - Set, track, and manage academic goals with visual progress indicators.
+- 🗂️ **Resource Sharing**  
+  Upload/download study materials securely via Firebase Storage
 
-- 💬 **In-App Chat**
-  - Real-time messaging with study buddies using Firebase Realtime Database.
+- 🎯 **Study Goals & Progress Tracker**  
+  Set academic goals and visually track your progress
 
-- 🧑‍💻 **Discussion Forums**
-  - Participate in course-specific discussions (e.g., BCA, BBA, MCA).
+- 💬 **In-App Chat**  
+  Real-time chat using Firebase Realtime Database
 
-- 📅 **Schedule Study Sessions**
-  - Pick date/time, enter topics, and view scheduled sessions.
+- 🧑‍💻 **Discussion Forums**  
+  Participate in course-specific forums with peers
 
-- 🔔 **Push Notifications** *(Upcoming)*
-  - Get notified of new messages, upcoming sessions, and deadlines.
+- 📅 **Schedule Study Sessions**  
+  Pick topics, set dates/times, and view upcoming sessions
+
+- 🔔 **Push Notifications** *(Coming Soon)*  
+  Alerts for chats, sessions, deadlines
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Java** – Core programming language
-- **XML** – UI Layouts
-- **Firebase**
-  - Authentication
-  - Realtime Database
-  - Firebase Storage
-- **Gradle** – Dependency Management
-- **Android Studio Meerkat (Giraffe compatible)**
+| Technology | Purpose |
+|------------|---------|
+| `Java` | Application logic |
+| `XML` | UI Layouts |
+| `Firebase Auth` | User Login/Register |
+| `Firebase Database` | Real-time data |
+| `Firebase Storage` | File uploads |
+| `Gradle` | Dependency management |
+| `Android Studio Meerkat` | Development IDE |
 
 ---
 
 ## 🔧 Installation & Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/study-buddy-app.git
-   cd study-buddy-app
-````
+### 📥 Clone the Repository
+```bash
+git clone https://github.com/your-username/study-buddy-app.git
+cd study-buddy-app
+```
 
-2. **Open in Android Studio**
+### ⚙ Open in Android Studio
 
-3. **Connect Firebase**
+1. Launch Android Studio
+2. Select `Open an existing project`
+3. Choose this project folder
 
-   * Add your own `google-services.json` to the `app/` directory.
-   * Enable:
+### 🔗 Connect Firebase
 
-     * Authentication (Email/Password)
-     * Realtime Database
-     * Firebase Storage
+1. Add your `google-services.json` file to `/app`
+2. In Firebase Console, enable:
+   - Firebase Authentication (Email/Password)
+   - Firebase Realtime Database
+   - Firebase Storage
 
-4. **Set Firebase Rules** (in Firebase console)
+### 🔐 Set Firebase Rules
 
-   ```json
-   {
-     "rules": {
-       "Users": {
-         ".read": "auth != null",
-         "$uid": {
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       },
-       "StudyGoals": {
-         "$uid": {
-           ".read": "auth != null && auth.uid == $uid",
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       },
-       "inappchat": {
-         ".read": "true",
-         ".write": "true"
-       },
-       "study_partners": {
-         ".read": "auth != null",
-         "$uid": {
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       },
-       "resources": {
-         ".read": "auth != null",
-         ".write": "auth != null"
-       },
-       "sessions": {
-         "$uid": {
-           ".read": "auth != null && auth.uid == $uid",
-           ".write": "auth != null && auth.uid == $uid"
-         }
-       }
-     }
-   }
-   ```
+```json
+{
+  "rules": {
+    "Users": {
+      ".read": "auth != null",
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "StudyGoals": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "inappchat": {
+      ".read": "true",
+      ".write": "true"
+    },
+    "study_partners": {
+      ".read": "auth != null",
+      "$uid": {
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+    "resources": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "sessions": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    }
+  }
+}
+```
 
 ---
-
 
 ## 📂 Project Structure
 
 ```
-├── Activities/
-│   ├── HomeActivity.java
-│   ├── InAppChatActivity.java
-│   ├── ScheduleActivity.java
-│   ├── ForumChatActivity.java
-│   └── ...
-├── Adapters/
-├── Models/
+📦 study-buddy-app/
+├── java/
+│   └── com/example/studyapp/
+│       ├── Activities/
+│       │   ├── HomeActivity.java
+│       │   ├── InAppChatActivity.java
+│       │   ├── ScheduleActivity.java
+│       │   ├── ForumChatActivity.java
+│       └── ...
+├── adapters/
+├── models/
 ├── res/
 │   ├── layout/
 │   ├── drawable/
 │   └── values/
-└── utils/
+├── utils/
+└── google-services.json  ← (Add yours here)
 ```
 
 ---
 
-## 🙋‍♂️ Author
+## 👤 Author
 
-* 💼 Ashith Fernandes
-* 📧 ashithfernandes319@gmail.com
+**Ashith Fernandes**  
+📧 [ashithfernandes319@gmail.com](mailto:ashithfernandes319@gmail.com)
 
 ---
 
@@ -143,19 +147,17 @@ Study Buddy is a collaborative Android application designed for college students
 
 If you like this project:
 
-* ⭐ Star it on GitHub
-* 🍴 Fork it
-* 🐛 Report issues or contribute enhancements!
+- ⭐ Star it on GitHub  
+- 🍴 Fork and build on top of it  
+- 🐛 Report bugs or suggest features  
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
-```
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-And This Project is open source u can Contribute towards this project and push back to this github account.
-```
+_This project is open source. Feel free to contribute, enhance it, and push your improvements to this GitHub repo!_
+
