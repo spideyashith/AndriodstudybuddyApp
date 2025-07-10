@@ -1,76 +1,76 @@
 package com.example.studyapp;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class InAppChatActivity extends AppCompatActivity {
-    EditText messageInput;
-    ImageButton sendMessageBtn;
-    ListView chatListView;
 
-    ArrayList<String> messageList;
-    ArrayAdapter<String> adapter;
+    ListView chatListView;
+    EditText chatMessageInput;
+    ImageButton sendMessageBtn;
+
+    ArrayList<ChatMessage> messageList;
+    ChatAdapter adapter;
 
     DatabaseReference chatRef;
+    String currentUid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_app_chat);
 
-        messageInput = findViewById(R.id.chatmessageInput);
-        sendMessageBtn = findViewById(R.id.sendmessagebtn);
         chatListView = findViewById(R.id.chatlistview);
+        chatMessageInput = findViewById(R.id.chatmessageInput);
+        sendMessageBtn = findViewById(R.id.sendmessagebtn);
 
         messageList = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, messageList);
+        adapter = new ChatAdapter(this, messageList);
         chatListView.setAdapter(adapter);
 
-        // Firebase DB reference
+        currentUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         chatRef = FirebaseDatabase.getInstance().getReference("inappchat");
 
-        // Send message to Firebase
-        sendMessageBtn.setOnClickListener(v -> {
-            String message = messageInput.getText().toString().trim();
-
-            if (!message.isEmpty()) {
-                String msgId = chatRef.push().getKey();
-                chatRef.child(msgId).setValue("You: " + message);
-                messageInput.setText("");
-            } else {
-                Toast.makeText(this, "Enter a message", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        // Listen for new messages
-        chatRef.addValueEventListener(new com.google.firebase.database.ValueEventListener() {
+        // Listen for messages
+        chatRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 messageList.clear();
-                for (DataSnapshot msgSnapshot : snapshot.getChildren()) {
-                    String msg = msgSnapshot.getValue(String.class);
-                    messageList.add(msg);
+                for (DataSnapshot msgSnap : snapshot.getChildren()) {
+                    String msg = msgSnap.child("message").getValue(String.class);
+                    String sender = msgSnap.child("sender").getValue(String.class);
+                    if (msg != null && sender != null) {
+                        boolean isSentByMe = sender.equals(currentUid);
+                        messageList.add(new ChatMessage(msg, isSentByMe));
+                    }
                 }
                 adapter.notifyDataSetChanged();
-                chatListView.smoothScrollToPosition(messageList.size() - 1);
+                chatListView.setSelection(adapter.getCount() - 1); // scroll to bottom
             }
 
             @Override
-            public void onCancelled(DatabaseError error) {
-                Toast.makeText(InAppChatActivity.this, "Failed to load messages.", Toast.LENGTH_SHORT).show();
+            public void onCancelled(DatabaseError error) { }
+        });
+
+        // Send message
+        sendMessageBtn.setOnClickListener(v -> {
+            String text = chatMessageInput.getText().toString().trim();
+            if (!text.isEmpty()) {
+                HashMap<String, Object> message = new HashMap<>();
+                message.put("message", text);
+                message.put("sender", currentUid);
+                chatRef.push().setValue(message);
+                chatMessageInput.setText("");
             }
         });
     }
